@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Future Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="reg.html">Register</a></li>
+            <li><a href="regform.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="card">
+          <div class="inner-box" id="card">
+            <div class="card-front">
+              <h2>LOGIN</h2>
+              <form class="" action="" method="post">
+                <input type="email" name="email" class="input-box" placeholder="Your Email" required>
+                <input type="password" name="password" class="input-box" placeholder="Password" required>
+                <button type="submit" name="login" class="submit-btn">Login</button>
+                <input type="checkbox"><span>Remember Me</span>
+              </form>
+              <button type="button" class="btn2" onclick="openRegister()">Register</button>
+            </div>
+
+            <div class="card-back">
+              <h2>REGISTER</h2>
+              <form class="" action="" method="post">
+                <input type="text" name="name" class="input-box" placeholder="Your Name" required>
+                <input type="email" name="email" class="input-box" placeholder="Your Email" required>
+                <input type="password" name="password" class="input-box" placeholder="Password" required>
+                <button type="submit" name="register" class="submit-btn">Register</button>
+              </form>
+              <button type="button" class="btn2" onclick="openLogin()">Already Registered</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var card = document.getElementById("card");
+      function openRegister() {
+        card.style.transform = "rotateY(-180deg)";
+      }
+      function openLogin() {
+        card.style.transform = "rotateY(0deg)";
+      }
+    </script>
+  </body>
+</html>
