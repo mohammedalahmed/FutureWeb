@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>Future Web</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,600&display=swap" rel="stylesheet">
-  </head>
-  <body>
+<?php include 'header.php'; ?>
+
     <section class="header">
       <nav>
-        <a href="index.html"><img src="images/logo.png"></a>
+        <a href="index.php"><img src="images/logo.png"></a>
         <div class="nav-links">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="reg.html">Register</a></li>
-            <li><a href="regform.html">Login</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="partners.php">Partners</a></li>
+            <li><a href="reg.php">Register</a></li>
+            <li><a href="regform.php">Login</a></li>
           </ul>
         </div>
       </nav>
@@ -62,5 +53,6 @@
     <!--- Bottom --->
 
     </section>
-  </body>
-</html>
+
+
+<?php include 'footer.php'; ?>
