@@ -1,22 +1,5 @@
 <?php include 'header.php'; ?>
 
-    <section class="header">
-      <nav>
-        <a href="index.php"><img src="images/logo.png"></a>
-        <div class="nav-links">
-          <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="partners.php">Partners</a></li>
-            <li><a href="reg.php">Register</a></li>
-            <li><a href="regform.php">Login</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="text-box">
-        <h1>Partners</h1>
-        <p>No one can build the success alone, know more about our Success Partners</p>
-        <a href="#part" class="btn">Know More</a>
-      </div>
     </section>
 
     <!--- Partners --->

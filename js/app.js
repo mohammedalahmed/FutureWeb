@@ -8,6 +8,29 @@ function openLogin() {
 card.style.transform = "rotateY(0deg)";
 }
 
+$('#regevent').submit(function(e){
+	e.preventDefault();
+
+	let form = $(this);
+	let actionUrl = 'registerevent.php'
+	let formData = form.serializeArray()
+
+	$.ajax({
+		type: 'POST',
+		url: actionUrl,
+		data: formData,
+		success: function(result){
+
+			$('#loggedMsg').css('display', 'block').css('background', 'orangered').html(result)
+			if (result == 'Already registered this event!') {
+				setTimeout(function(){ $('#loggedMsg').css('display', 'none') }, 3000);
+			}else{
+				setTimeout(function(){ window.location = 'index.php'; }, 3000);
+			}
+
+		}
+	});
+});
 
 $('#loginForm').submit(function(e){
 	e.preventDefault();

@@ -114,6 +114,7 @@ input {
 			<?php if($_SESSION['admin']){ ?>
 			<li> <a href="./admin_users.php">Users</a> </li>
 			<li> <a href="./admin_caregories.php">Caregories</a> </li>
+			<li> <a href="./admin_requests.php">Requests</a> </li>
 			<?php } ?>
 			<li> <a href="?logout=true">Logout</a> </li>
 		</div>

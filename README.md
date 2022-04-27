@@ -1,3 +1,11 @@
+- سو قاعدة بيانات باسم: futureweb
+- افتح ملف config.php وعدل اليوزر والباسورد والنيم لبيانات قاعدة البيانات الجديدة
+- سو امبورت لملف sql بمجلد sql_file
+- افتح الموقع وسو تسجيل وبعد ماتخلص افتح الداتابيس ورح لجدول users وحط عند ادمن رقم 1 عند اسمك
+
+وخلاص كذا انت فل اكسس جرب وهاف فن
+
+[ SUCCESSFULLY DO ]
 INSTRUCTIONS/TASKS: 
 	Assume that you are an event organizer (any type of event). The event requires participants to register online. The event can be any type of your interest. 
 	Based on the event type/title, you shall choose an appropriate CSS style design to suite the event. For example, of the event is an official event, you need to apply a formal design/layout for your page. 
@@ -23,6 +31,6 @@ o	Must have at least the following:
 	Use the “required” form attribute or JavaScript function check( ), will make sure that all fields need to be entered before submission. If one of the text fields is left blank, display a dialog message “Please enter all fields” and stop submission.
 	Login/ logout with SESSION (authentication) *
 o	Use the “required” form attribute or JavaScript function check( ), will make sure that all fields need to be entered before submission. If one of the text fields is left blank, display a dialog message “Please enter all fields” and stop submission.
-	Allow user to register at least one subprogram/category. (insert function)
+	Allow user to register at least one subprogram/category. (insert function) *
 	Display and edit user profile including to change category. (all information can be edited EXCEPT username) *
-	Restrict user to register the event if the quota is FULL. (Extra Function)
+	Restrict user to register the event if the quota is FULL. (Extra Function) *

@@ -1,4 +1,5 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+if(isset($_SESSION['id'])){ echo "<script>alert('You are already logged')</script>"; header('Refresh: 0; URL = index.php'); }; ?>
 
       <div class="container">
         <div class="card">

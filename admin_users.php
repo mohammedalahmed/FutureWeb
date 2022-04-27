@@ -30,7 +30,7 @@ if($sql->num_rows > 0){
 							<td>". $i++ ."</td>
 							<td>". $row['username'] ."</td>
 							<td>". $row['email'] ."</td>
-							<td><a href='#'>EDIT</a> | <a onclick='deleteUser(". $row['id'] .")'>DELETE</a></td>
+							<td><a href='admin_users_action.php?action=update&id=". $row['id'] ."'>EDIT</a> | <a onclick='deleteUser(". $row['id'] .")'>DELETE</a></td>
 						</tr>
 		";
 	}

@@ -1,4 +1,5 @@
-<?php include 'admin_header.php'; ?>
+<?php include 'admin_header.php'; 
+if(!isset($_SESSION['email'])){ header('Refresh: 0; URL = regform.php'); };?>
 
 	<div class="adminRightSide">
 		<main>
