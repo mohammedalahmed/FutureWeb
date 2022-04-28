@@ -49,9 +49,9 @@ $('#loginForm').submit(function(e){
 				setTimeout(function(){ $('#loggedMsg').css('display', 'none') }, 3000);
 			}else{
 				$('#loggedMsg').css('display', 'block').css('background', 'orangered').html('Welcome In')
-				setTimeout(function(){ window.location = 'admin.php'; }, 3000);
+				setTimeout(function(){ window.location = 'index.php'; }, 3000);
 			}
-			
+
 		}
 	});
 });
@@ -119,7 +119,45 @@ function deleteUser(ident){
 					$('#loggedMsg').css('display', 'block').css('background', 'orangered').html('Successfully deleted user')
 					setTimeout(function(){ window.location = 'admin_users.php'; }, 3000);
 				}
-				
+
 			}
 		});
 }
+
+$('#updateProfile').submit(function(e){
+	e.preventDefault();
+
+	let form = $(this);
+	let actionUrl = 'updateProfile.php'
+	let formData = form.serializeArray()
+
+	let pass = formData[2]['value']
+	let c_pass = formData[3]['value']
+
+	if (pass != c_pass) {
+		alert('Confirm pass is wrong!')
+		return false
+	}
+
+	$.ajax({
+		type: 'POST',
+		url: actionUrl,
+		data: formData,
+		success: function(result){
+
+			if (result == 'Successfully Updated1') {
+				$('#loggedMsg').css('display', 'block').css('background', 'orangered').html('Successfully Updated')
+				setTimeout(function(){ $('#loggedMsg').css('display', 'none') }, 3000);
+				setTimeout(function(){ window.location = '?logout=true'; }, 3000);
+			}else if (result == 'Successfully Updated2') {
+				// setTimeout(function(){ window.location = 'index.php'; }, 3000);
+				$('#loggedMsg').css('display', 'block').css('background', 'orangered').html('Successfully Updated')
+				setTimeout(function(){ $('#loggedMsg').css('display', 'none') }, 3000);
+			}else{
+				$('#loggedMsg').css('display', 'block').css('background', 'orangered').html(result)
+				setTimeout(function(){ window.location = 'index.php'; }, 3000);
+			}
+
+		}
+	});
+});

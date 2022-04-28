@@ -19,10 +19,12 @@
           <li><a href="index.php">Home</a></li>
           <li><a href="partners.php">Partners</a></li>
           <li><a href="reg.php">Register</a></li>
-          <?php if(!$_SESSION['username']){ ?>
+          <?php if(empty($_SESSION['username'])){ ?>
           <li><a href="regform.php">Login</a></li>
           <?php }else{ ?>
+          <li><a href="profile.php">Profile</a></li>
           <li><a href="admin.php">Panel</a></li>
+          <li><a href="?logout=true" onclick="return confirm('Are you sure to logout?')">Logout</a></li>
           <?php } ?>
         </ul>
       </div>

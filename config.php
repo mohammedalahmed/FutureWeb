@@ -4,7 +4,7 @@ session_start();
 
 $host = "localhost";
 $user = "root";
-$pass = "alshowoq";
+$pass = "";
 $name = "futureweb";
 $port = 3306;
 
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-if(isset($_GET) && $_GET['logout'] == true){
+if(!empty($_GET) && $_GET['logout'] == true){
   unset($_SESSION["username"]);
   unset($_SESSION["id"]);
   unset($_SESSION["email"]);
