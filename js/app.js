@@ -153,9 +153,49 @@ $('#updateProfile').submit(function(e){
 				// setTimeout(function(){ window.location = 'index.php'; }, 3000);
 				$('#loggedMsg').css('display', 'block').css('background', 'orangered').html('Successfully Updated')
 				setTimeout(function(){ $('#loggedMsg').css('display', 'none') }, 3000);
+				setTimeout(function(){ window.location = 'profile.php'; }, 3000);
 			}else{
 				$('#loggedMsg').css('display', 'block').css('background', 'orangered').html(result)
 				setTimeout(function(){ window.location = 'index.php'; }, 3000);
+			}
+
+		}
+	});
+});
+
+
+
+function deleteThisEvent(ident){
+	if(confirm('Are you sure?'))
+		$.ajax({
+			type: 'POST',
+			url: 'deleteThisEvent.php',
+			data: {id: ident},
+			success: function(result){
+				alert(result)
+				setTimeout(function(){ window.location = 'profile.php'; }, 3000);
+			}
+		});
+}
+
+$('#updateProfileEvent').submit(function(e){
+	e.preventDefault();
+
+	let form = $(this);
+	let actionUrl = 'updateProfileEvent2.php'
+	let formData = form.serializeArray()
+
+	$.ajax({
+		type: 'POST',
+		url: actionUrl,
+		data: formData,
+		success: function(result){
+
+			alert(result)
+			if (result == 'Successfully Updated') {
+				setTimeout(function(){ window.location = 'profile.php'; }, 3000);
+			}else{
+				setTimeout(function(){ $('#loggedMsg').css('display', 'none') }, 3000);
 			}
 
 		}

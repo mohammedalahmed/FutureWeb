@@ -4,7 +4,7 @@ session_start();
 
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "alshowoq";
 $name = "futureweb";
 $port = 3306;
 

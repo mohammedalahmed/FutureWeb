@@ -9,6 +9,4 @@ if($_POST && $_SESSION['admin']){
 	}else{
 		echo 'false';
 	}
-
-	$conn->close();
 }
